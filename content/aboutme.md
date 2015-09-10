@@ -18,7 +18,7 @@ I'm running gentoo at home, ubuntu + coreos on servers.
 - 08-2009 - 12-2010: Hired freelancer at eveca GmbH
 - 06-2004 - 08-2009: Programmer at eveca GmbH Regensburg/Germany (Serveradministation, Typo3, php)
 
-## Skills 2015 (max +++)
+## Skills 2015
 - Java +++
 - Golang +++
 - Docker +++
