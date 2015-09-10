@@ -1,0 +1,26 @@
+  {{ partial "header.html" . }}
+  <body>
+    {{ partial "navbar.html" . }}
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h1 id="type">Blog</h1>
+          </div>
+        </div>
+      </div>
+      <div class="blog-entries">
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="posts">
+              {{ range $index, $page := (where .Data.Pages "Section" "posts") }}
+                  {{ .Render "li" }}
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {{ partial "footer.html" . }}
+      
+    </div>
+{{ partial "foot.html" . }}

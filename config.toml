@@ -1,0 +1,7 @@
+baseurl = "http://www.blang.io/"
+languageCode = "en-us"
+title = "Benedikt Lang"
+theme = "default"
+
+[params]
+	author = "Benedikt Lang"

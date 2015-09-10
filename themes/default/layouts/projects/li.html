@@ -1,0 +1,36 @@
+{{ $baseurl := .Site.BaseURL }}
+<li>
+	<h2>
+	{{ if isset .Params "project_url" }}
+		<a class="post-link" href="{{ .Params.project_url }}">{{ .Title }}</a>
+	{{ else }}
+		<a class="post-link" href="{{ .Permalink }}">{{ .Title }}</a>
+	{{ end }}
+	</h2>
+	<p>
+	{{ .Summary}}
+	</p>
+	<span class="project-meta">
+		<ul>
+			<li>
+				{{ if isset .Params "project" }}
+				<img src="https://img.shields.io/github/stars/{{ .Params.project }}.svg" />
+				<img src="https://img.shields.io/github/forks/{{ .Params.project }}.svg" />
+				{{ end }}
+				{{ if isset .Params "license" }}
+				<img src="https://img.shields.io/badge/license-{{ .Params.license }}-blue.svg" />
+				{{ end }}
+			</li>
+			<li>
+				<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+           Project start: {{ .Date.Format "Jan 2006" }}
+        		</time>
+	        </li>
+	        {{ if isset .Params "lang" }}
+	        <li>
+	        	<span>Environment: {{ .Params.lang }}</span>
+	        </li>
+	        {{ end }}
+		</ul>
+    </span>
+</li>

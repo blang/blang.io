@@ -1,0 +1,48 @@
+
+  {{ partial "header.html" . }}
+  <body>
+    {{ partial "navbar.html" . }}
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="page-header">
+            <h1 id="type">Projects</h1>
+            <p><a href="https://github.com/blang?tab=repositories">See all projects on Github</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="project-entries">
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="projects">
+              {{ range $index, $page := where .Data.Pages.ByWeight.Reverse "Params.group" "primary" }}
+              
+                  {{ .Render "li" }}
+              
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+            <h2>Secondary projects</h1>
+        </div>
+      </div>
+      <div class="project-entries">
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="projects">
+              {{ range $index, $page := where .Data.Pages.ByDate.Reverse "Params.group" "!=" "primary" }}
+              
+                  {{ .Render "li" }}
+              
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {{ partial "footer.html" . }}
+      
+    </div>
+{{ partial "foot.html" . }}

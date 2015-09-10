@@ -1,0 +1,9 @@
+name = "blang"
+license = "MIT"
+description = "blang.io default theme"
+min_version = 0.14
+
+[author]
+  name = "blang"
+  homepage = "//github.com/blang"
+
