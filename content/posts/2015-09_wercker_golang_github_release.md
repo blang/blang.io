@@ -13,6 +13,7 @@ Have a look at the [release of my project](https://github.com/blang/pushovercli/
 <!--more-->
 
 The deploy steps:
+
 - Install utilities `file` and `jq`
 - Get the git tag of your current commit. That's a tricky part described later
 - Setup go workspace
