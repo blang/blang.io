@@ -6,7 +6,7 @@ license: "MIT"
 group: secondary
 ---
 
-Mantis is one of the largest project realised till today. Mantis is used to manage ArmA2/3 gameservers. It manages the whole workflow from running, configuring multiple server instances to clients joining with auto configured mods. It's in production since April 2014.
+Mantis is one of the largest project i've build till today. Mantis is used to manage ArmA2/3 gameservers. It manages the whole workflow from running, configuring multiple server instances to clients joining with auto configured mods. It's in production since April 2014.
 
 <!--more-->
 
