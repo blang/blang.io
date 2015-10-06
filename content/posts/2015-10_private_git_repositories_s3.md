@@ -80,3 +80,12 @@ To git@git.[yourhost]:[yourrepo].git
 ```
 
 If everything worked, you will see the upload process as output of your git push.
+
+Transfer repository from github to your server
+-----------
+
+```bash
+git clone --mirror git@github.com:[user]/[repo].git
+git remote set-url --push origin git@git.[server]:[repo].git
+git push --mirror
+```
