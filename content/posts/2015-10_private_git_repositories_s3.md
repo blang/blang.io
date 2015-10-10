@@ -6,6 +6,8 @@ comments: true
 
 Github is a bit too expensive to offload my private repositories which i'm not currently working on. It's quite easy to create you own git server and setup a backup to s3. Here is how:
 
+<!--more-->
+
 Setup git server
 ----------------
     apt-get install git
