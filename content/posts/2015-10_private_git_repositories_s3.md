@@ -46,7 +46,7 @@ if [ -d "/home/git/$proj.git" ]; then
         exit 1
 fi
 echo "Creating git repository: $proj"
-su -s /bin/bash -c "mkdir /home/git/${proj}.git && cd /home/git/${proj}.git && git init --bare && cp /home/git/githook.sh /home/git/${proj}.git/hooks/post-receive" git
+su -s /bin/bash -c "mkdir /home/git/${proj}.git && cd /home/git/${proj}.git && git init --bare && ln -s /home/git/githook.sh /home/git/${proj}.git/hooks/post-receive" git
 ```
 
 Post-receive hook (/home/git/githook.sh)
