@@ -56,7 +56,7 @@ Post-receive hook (/home/git/githook.sh)
 
 S3_BUCKET="[yourbucketname]"
 repo=${PWD##*/}
-aws s3 sync ./ s3://$S3_BUCKET/$repo
+aws s3 sync --delete ./ s3://$S3_BUCKET/$repo
 ```
 
 Create a new repository
