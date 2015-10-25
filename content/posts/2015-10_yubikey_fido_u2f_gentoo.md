@@ -6,7 +6,14 @@ title = "Yubikey FIDO U2F on Gentoo"
 I just got the github promo [Yubikey with U2F](https://www.yubico.com/products/yubikey-hardware/fido-u2f-security-key/).
 It wasn't as plug and play as i thought so i will share my experience.
 
+
 <!--more-->
+The Error
+=========
+
+Visiting the [yubico demo site](https://demo.yubico.com/u2f?tab=register) i got the useless error:
+`Exception: FIDO Client error: 1 (OTHER ERROR)`
+
 Kernel: HIDraw
 ==============
 
@@ -48,5 +55,5 @@ Test yubikey
 ============
 
 Go to [yubicos demo site](https://demo.yubico.com/u2f?tab=register) and try your yubikey.
-If you still get an error like `Error Code 1 (Other error)`
+If you still get the error recheck permissions, use `lsusb` and `dmesg` to check your key is available.
 
