@@ -104,10 +104,9 @@ Startup
 /etc/rc.local
 ```
 echo "Enable null routing"
-ip route add blackhole 192.168.111.0/24
-# OR enable nullrouting via table to disable connection to the gateway via 192.168.111.1
 ip route add default via 127.0.0.1 dev lo table null
 ip rule add from 192.168.111.0/24 table null
+ip rule add from 192.168.111.1
 
 echo "Enable NAT on eth0"
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
