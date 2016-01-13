@@ -120,9 +120,9 @@ iptables -t nat -A POSTROUTING -o tun2 -j MASQUERADE
 iptables -t nat -A POSTROUTING -o tun3 -j MASQUERADE
 
 echo "Starting vpn service 1"
-start-stop-daemon --start --background --make-pidfile --oknodo --user root --name vpn1 --pidfile /var/run/vpn1.pid --startas /home/pi/vpn1.sh --chuid root -- --daemon
+start-stop-daemon --start --background --make-pidfile --oknodo --user root --name vpn1 --pidfile /var/run/vpn1.pid --startas /home/pi/vpn1.sh --chuid root 
 echo "Starting vpn service 2"
-start-stop-daemon --start --background --make-pidfile --oknodo --user root --name vpn2 --pidfile /var/run/vpn2.pid --startas /home/pi/vpn2.sh --chuid root -- --daemon
+start-stop-daemon --start --background --make-pidfile --oknodo --user root --name vpn2 --pidfile /var/run/vpn2.pid --startas /home/pi/vpn2.sh --chuid root
 
 exit 0
 ```
